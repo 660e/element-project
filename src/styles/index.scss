@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+::-webkit-scrollbar {
+  height: theme('height.1');
+  width: theme('width.1');
+}
+::-webkit-scrollbar-thumb {
+  border-radius: theme('borderRadius.full');
+  background-color: theme('colors.gray.400');
+  &:hover {
+    background-color: theme('colors.gray.500');
+  }
+}
