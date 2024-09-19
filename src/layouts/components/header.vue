@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const header = ref('header');
+</script>
 
 <template>
-  <header>header</header>
+  <header>{{ header }}</header>
 </template>

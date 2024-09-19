@@ -10,9 +10,12 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 export default defineConfig({
   plugins: [
     AutoImport({
+      dts: './src/auto-imports.d.ts',
+      imports: ['vue', 'vue-router'],
       resolvers: [ElementPlusResolver()],
     }),
     Components({
+      dts: './src/components.d.ts',
       resolvers: [ElementPlusResolver()],
     }),
     vue(),
