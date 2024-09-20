@@ -1,7 +1,9 @@
 <script setup lang="ts">
-const header = ref('header');
+import ToggleDark from './toggle-dark.vue';
 </script>
 
 <template>
-  <header>{{ header }}</header>
+  <header>
+    <toggle-dark />
+  </header>
 </template>
