@@ -5,12 +5,16 @@ import AppFooter from './components/footer.vue';
 </script>
 
 <template>
-  <div class="h-screen flex flex-col">
+  <div class="h-screen overflow-hidden flex flex-col">
     <app-header />
-    <app-aside />
-    <main>
-      <router-view />
-    </main>
-    <app-footer />
+    <div class="flex">
+      <app-aside />
+      <div class="flex-1">
+        <main>
+          <router-view />
+        </main>
+        <app-footer />
+      </div>
+    </div>
   </div>
 </template>
