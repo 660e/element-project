@@ -3,7 +3,9 @@ import ToggleDark from './toggle-dark.vue';
 </script>
 
 <template>
-  <header>
+  <header class="p-2 flex space-x-2">
+    <div class="flex-auto"></div>
     <toggle-dark />
+    <el-avatar :size="32" src="https://avatars.githubusercontent.com/u/28943787" />
   </header>
 </template>
