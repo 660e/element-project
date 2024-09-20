@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import Search from '~icons/ep/search';
+</script>
+
 <template>
-  <div>Lorem ipsum dolor sit amet.</div>
+  <div>
+    <i-ep-search />
+    <el-button :icon="Search">Search</el-button>
+  </div>
 </template>
