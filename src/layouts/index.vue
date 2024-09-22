@@ -7,7 +7,7 @@ import AppFooter from './components/footer.vue';
 <template>
   <div class="h-screen overflow-hidden flex flex-col">
     <app-header />
-    <div class="flex">
+    <div class="flex-1 h-full flex">
       <app-aside />
       <div class="flex-1">
         <main>

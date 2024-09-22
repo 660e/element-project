@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <aside>
-    <el-menu>
+  <aside class="h-full flex flex-col">
+    <el-menu class="flex-1 h-full overflow-y-auto">
       <el-sub-menu index="1">
         <template #title>
           <span>Navigator One</span>
@@ -20,5 +20,6 @@
         <span>Navigator Four</span>
       </el-menu-item>
     </el-menu>
+    <div class="h-96 bg-red-300">bottom</div>
   </aside>
 </template>
