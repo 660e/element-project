@@ -1,9 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const isCollapse = ref(false);
+</script>
 
 <template>
-  <aside class="flex flex-col">
+  <aside class="flex flex-col border-r border-neutral-200 dark:border-neutral-800">
     <el-scrollbar class="flex-1">
-      <el-menu>
+      <el-menu :collapse="isCollapse" style="border: 0">
         <el-sub-menu index="1">
           <template #title>
             <el-icon><i-ep-menu /></el-icon>
@@ -26,6 +28,15 @@
         </el-menu-item>
       </el-menu>
     </el-scrollbar>
-    <div class="h-10 bg-red-300"></div>
+
+    <div
+      @click="isCollapse = !isCollapse"
+      class="h-8 cursor-pointer flex justify-center items-center duration-200 bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 hover:dark:bg-neutral-800"
+    >
+      <el-icon>
+        <i-ep-d-arrow-right v-if="isCollapse" />
+        <i-ep-d-arrow-left v-else />
+      </el-icon>
+    </div>
   </aside>
 </template>
