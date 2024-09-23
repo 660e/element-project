@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AppHeader from './components/header.vue';
 import AppAside from './components/aside.vue';
+import AppTabs from './components/tabs.vue';
 import AppFooter from './components/footer.vue';
 </script>
 
@@ -9,8 +10,9 @@ import AppFooter from './components/footer.vue';
     <app-header />
     <div class="flex-1 overflow-auto flex">
       <app-aside />
-      <div class="flex-1">
-        <main>
+      <div class="flex-1 flex flex-col">
+        <app-tabs />
+        <main class="flex-1">
           <router-view />
         </main>
         <app-footer />
