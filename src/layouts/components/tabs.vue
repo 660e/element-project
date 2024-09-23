@@ -19,6 +19,9 @@ const removeTab = (name: TabPaneName) => {
 <style lang="scss" scoped>
 .el-tabs {
   border: 0;
+  ::v-deep(.el-tabs__header .el-tabs__item) {
+    line-height: 1;
+  }
   ::v-deep(.el-tabs__content) {
     display: none;
   }
