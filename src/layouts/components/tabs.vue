@@ -9,21 +9,33 @@ const removeTab = (name: TabPaneName) => {
 </script>
 
 <template>
-  <div>
+  <div class="app-tabs">
     <el-tabs v-model="active" @tab-remove="removeTab" type="border-card" closable>
       <el-tab-pane v-for="tab in tabs" :key="tab" :label="tab" :name="tab" />
     </el-tabs>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.el-tabs {
+<style lang="scss">
+.app-tabs > .el-tabs {
   border: 0;
-  ::v-deep(.el-tabs__header .el-tabs__item) {
-    line-height: 1;
+  .el-tabs__header {
+    background-color: theme('colors.white');
+    .el-tabs__item {
+      line-height: 1;
+      &.is-active {
+        background-color: theme('colors.neutral.100');
+      }
+    }
   }
-  ::v-deep(.el-tabs__content) {
+  .el-tabs__content {
     display: none;
+  }
+}
+.dark .app-tabs > .el-tabs > .el-tabs__header {
+  background-color: theme('colors.black');
+  .el-tabs__item.is-active {
+    background-color: theme('colors.neutral.900');
   }
 }
 </style>
