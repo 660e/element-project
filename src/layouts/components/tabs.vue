@@ -33,9 +33,9 @@ const removeTab = (name: TabPaneName) => {
   }
 }
 .dark .app-tabs > .el-tabs > .el-tabs__header {
-  background-color: theme('colors.black');
+  background-color: theme('colors.neutral.900');
   .el-tabs__item.is-active {
-    background-color: theme('colors.neutral.900');
+    background-color: theme('colors.black');
   }
 }
 </style>

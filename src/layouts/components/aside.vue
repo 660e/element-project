@@ -31,7 +31,7 @@ const isCollapse = ref(false);
 
     <div
       @click="isCollapse = !isCollapse"
-      class="h-8 cursor-pointer flex justify-center items-center duration-200 border-t border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 hover:dark:bg-neutral-900"
+      class="h-8 cursor-pointer flex justify-center items-center duration-200 border-t border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 hover:dark:bg-black"
     >
       <el-icon>
         <i-ep-d-arrow-right v-if="isCollapse" />
