@@ -4,6 +4,7 @@ import { QPage } from '@/components/index';
 
 <template>
   <q-page>
-    <div>Lorem ipsum dolor sit amet.</div>
+    <!-- <div class="h-[1000px]"></div> -->
+    <div class="h-full"></div>
   </q-page>
 </template>

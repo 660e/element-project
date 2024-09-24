@@ -12,7 +12,7 @@ import AppFooter from './components/footer.vue';
       <app-aside />
       <div class="flex-1 flex flex-col">
         <app-tabs />
-        <main class="flex-1 p-2 bg-neutral-100 dark:bg-black">
+        <main class="flex-1 overflow-auto p-2 bg-neutral-100 dark:bg-black">
           <router-view />
         </main>
         <app-footer />
