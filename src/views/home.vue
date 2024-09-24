@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { QPage } from '@/components';
+import { QPage } from '@/components/index';
 </script>
 
 <template>
