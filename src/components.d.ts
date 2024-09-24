@@ -23,6 +23,7 @@ declare module 'vue' {
     IEpDArrowLeft: typeof import('~icons/ep/d-arrow-left')['default']
     IEpDArrowRight: typeof import('~icons/ep/d-arrow-right')['default']
     IEpMenu: typeof import('~icons/ep/menu')['default']
+    Page: typeof import('./components/page/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
