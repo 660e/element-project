@@ -16,6 +16,11 @@
 //   }
 // }
 
-// body {
-//   background-color: theme('colors.red.500');
-// }
+body {
+  background-color: theme('colors.white');
+}
+.dark {
+  body {
+    background-color: theme('colors.neutral.900');
+  }
+}
