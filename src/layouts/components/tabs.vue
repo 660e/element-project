@@ -18,9 +18,10 @@ const removeTab = (name: TabPaneName) => {
 
 <style lang="scss">
 .app-tabs > .el-tabs {
+  background-color: transparent;
   border: 0;
   .el-tabs__header {
-    background-color: theme('colors.white');
+    background-color: transparent;
     .el-tabs__item {
       line-height: 1;
       &.is-active {
@@ -32,10 +33,7 @@ const removeTab = (name: TabPaneName) => {
     display: none;
   }
 }
-.dark .app-tabs > .el-tabs > .el-tabs__header {
-  background-color: theme('colors.neutral.900');
-  .el-tabs__item.is-active {
-    background-color: theme('colors.black');
-  }
+.dark .app-tabs > .el-tabs > .el-tabs__header .el-tabs__item.is-active {
+  background-color: theme('colors.black');
 }
 </style>

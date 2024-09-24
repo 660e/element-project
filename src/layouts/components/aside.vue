@@ -5,7 +5,7 @@ const isCollapse = ref(false);
 <template>
   <aside class="flex flex-col border-r border-neutral-200 dark:border-neutral-800">
     <el-scrollbar class="flex-1">
-      <el-menu :collapse="isCollapse" style="border: 0">
+      <el-menu :collapse="isCollapse">
         <el-sub-menu index="1">
           <template #title>
             <el-icon><i-ep-menu /></el-icon>
@@ -40,3 +40,10 @@ const isCollapse = ref(false);
     </div>
   </aside>
 </template>
+
+<style lang="scss" scoped>
+.el-menu {
+  background-color: transparent;
+  border: 0;
+}
+</style>
