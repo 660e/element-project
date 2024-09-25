@@ -1,9 +1,13 @@
 import { defineStore } from 'pinia';
 
-export type Size = 'large' | 'default' | 'small';
+export enum Size {
+  Large = 'large',
+  Default = 'default',
+  Small = 'small',
+}
 
 export const useConfigProviderStore = defineStore('config-provider', () => {
-  const size = ref<Size>('default');
+  const size = ref<Size>(Size.Default);
 
   return { size };
 });
