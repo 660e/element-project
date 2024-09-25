@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const size = 'default';
+import { useConfigProviderStore } from './stores';
+
+const configProviderStore = useConfigProviderStore();
 </script>
 
 <template>
-  <el-config-provider :size="size">
+  <el-config-provider :size="configProviderStore.size">
     <router-view />
   </el-config-provider>
 </template>
