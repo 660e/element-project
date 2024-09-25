@@ -11,7 +11,11 @@ const sizeOptions = Object.keys(Size).map((key) => {
 
 <template>
   <el-tooltip :disabled="visible" content="Size">
-    <el-dropdown @command="(command: Size) => (configProviderStore.size = command)" @visible-change="(val) => (visible = val)" trigger="click">
+    <el-dropdown
+      @command="(command: Size) => (configProviderStore.size = command)"
+      @visible-change="(val: boolean) => (visible = val)"
+      trigger="click"
+    >
       <el-button circle></el-button>
       <template #dropdown>
         <el-dropdown-menu>
