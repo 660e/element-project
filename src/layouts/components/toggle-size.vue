@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { useConfigProviderStore } from '@/stores/modules/config-provider';
 import { Size } from '@/stores/modules/config-provider';
+import SetUp from '~icons/ep/SetUp';
 
 const visible = ref(false);
+const onVisibleChange = (val: boolean) => (visible.value = val);
+
 const configProviderStore = useConfigProviderStore();
+const handleCommand = (command: Size) => (configProviderStore.size = command);
 const sizeOptions = Object.keys(Size).map((key) => {
   return { command: Size[key as keyof typeof Size], label: key };
 });
@@ -11,12 +15,8 @@ const sizeOptions = Object.keys(Size).map((key) => {
 
 <template>
   <el-tooltip :disabled="visible" content="Size">
-    <el-dropdown
-      @command="(command: Size) => (configProviderStore.size = command)"
-      @visible-change="(val: boolean) => (visible = val)"
-      trigger="click"
-    >
-      <el-button circle></el-button>
+    <el-dropdown @command="handleCommand" @visible-change="onVisibleChange" trigger="click">
+      <el-button :icon="SetUp" circle></el-button>
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item v-for="item in sizeOptions" :key="item.command" :command="item.command">{{ item.label }}</el-dropdown-item>

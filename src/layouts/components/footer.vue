@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ArrowRight from '~icons/ep/arrow-right';
+import ArrowRight from '~icons/ep/ArrowRight';
 import PKG from '../../../package.json';
 </script>
 

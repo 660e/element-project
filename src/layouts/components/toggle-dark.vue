@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDark, useToggle } from '@vueuse/core';
-import Moon from '~icons/ep/moon';
-import Sunny from '~icons/ep/sunny';
+import Moon from '~icons/ep/Moon';
+import Sunny from '~icons/ep/Sunny';
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
