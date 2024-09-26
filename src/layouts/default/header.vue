@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import PKG from '../../../package.json';
-import ToggleSize from './toggle-size.vue';
-import ToggleDark from './toggle-dark.vue';
+import ToggleSize from '../components/toggle-size.vue';
+import ToggleDark from '../components/toggle-dark.vue';
 </script>
 
 <template>

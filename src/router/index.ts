@@ -9,7 +9,7 @@ export default createRouter({
     },
     {
       path: '/',
-      component: () => import('@/layouts/index.vue'),
+      component: () => import('@/layouts/default/index.vue'),
       children: [
         {
           path: 'home',

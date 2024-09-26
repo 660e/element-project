@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import AppHeader from './components/header.vue';
-import AppAside from './components/aside.vue';
-import AppTabs from './components/tabs.vue';
-import AppFooter from './components/footer.vue';
+import AppHeader from './header.vue';
+import AppAside from './aside.vue';
+import AppTabs from './tabs.vue';
+import AppFooter from './footer.vue';
 </script>
 
 <template>
