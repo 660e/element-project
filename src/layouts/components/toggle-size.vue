@@ -16,7 +16,7 @@ const sizeOptions = Object.keys(Size).map((key) => {
 <template>
   <el-tooltip :disabled="visible" content="Size">
     <el-dropdown @command="handleCommand" @visible-change="onVisibleChange" trigger="click">
-      <el-button :icon="SetUp" circle></el-button>
+      <el-button :icon="SetUp" circle text></el-button>
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item v-for="item in sizeOptions" :key="item.command" :command="item.command">{{ item.label }}</el-dropdown-item>

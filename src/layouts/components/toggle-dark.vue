@@ -9,6 +9,6 @@ const toggleDark = useToggle(isDark);
 
 <template>
   <el-tooltip :content="isDark ? 'Light' : 'Dark'">
-    <el-button :icon="isDark ? Sunny : Moon" @click="toggleDark()" circle />
+    <el-button :icon="isDark ? Sunny : Moon" @click="toggleDark()" circle text />
   </el-tooltip>
 </template>
