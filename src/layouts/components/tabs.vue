@@ -3,14 +3,14 @@ import type { TabPaneName } from 'element-plus';
 
 const active = ref('Tab 1');
 const tabs = ref(['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4']);
-const removeTab = (name: TabPaneName) => {
+const tabRemove = (name: TabPaneName) => {
   console.log(name);
 };
 </script>
 
 <template>
   <div class="app-tabs">
-    <el-tabs v-model="active" @tab-remove="removeTab" type="border-card" closable>
+    <el-tabs v-model="active" @tab-remove="tabRemove" type="border-card" closable>
       <el-tab-pane v-for="tab in tabs" :key="tab" :label="tab" :name="tab" />
     </el-tabs>
   </div>
