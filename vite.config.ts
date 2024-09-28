@@ -13,14 +13,14 @@ export default defineConfig({
   plugins: [
     // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
-      dts: './src/auto-imports.d.ts',
+      dts: fileURLToPath(new URL('./src/auto-imports.d.ts', import.meta.url)),
       imports: ['vue', 'vue-router'],
       resolvers: [ElementPlusResolver()],
     }),
 
     // https://github.com/unplugin/unplugin-vue-components
     Components({
-      dts: './src/components.d.ts',
+      dts: fileURLToPath(new URL('./src/components.d.ts', import.meta.url)),
       resolvers: [
         ElementPlusResolver(),
         IconsResolver({
