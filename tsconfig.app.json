@@ -1,19 +1,30 @@
+/* https://www.typescriptlang.org/tsconfig/ */
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
-    "target": "ESNext",
-    "useDefineForClassFields": true,
+    /* Modules */
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Node",
-
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "resolveJsonModule": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
+    /* Language and Environment */
+    "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+
+    /* Projects */
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
   }
 }
