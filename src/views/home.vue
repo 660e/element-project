@@ -4,7 +4,6 @@ import { QPage } from '@/components/index';
 
 <template>
   <q-page>
-    <!-- <div class="h-[1000px]"></div> -->
     <div class="h-full p-2">
       <el-button>Default</el-button>
     </div>
