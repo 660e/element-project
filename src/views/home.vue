@@ -2,6 +2,6 @@
 
 <template>
   <div class="h-full p-2">
-    <div>home</div>
+    <el-button>Default</el-button>
   </div>
 </template>
