@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>home</div>
+  <div class="h-full p-2">
+    <div>home</div>
+  </div>
 </template>
