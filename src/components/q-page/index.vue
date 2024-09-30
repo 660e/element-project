@@ -3,7 +3,7 @@
 <template>
   <div class="h-full rounded border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
     <el-scrollbar>
-      <slot />
+      <slot></slot>
     </el-scrollbar>
   </div>
 </template>

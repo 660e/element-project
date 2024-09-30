@@ -13,6 +13,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'error',
 
     // https://eslint.vuejs.org/rules/
+    'vue/html-self-closing': ['error', { html: { normal: 'never', void: 'always' } }],
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/singleline-html-element-content-newline': 'off',
