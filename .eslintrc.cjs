@@ -13,6 +13,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'error',
 
     // https://eslint.vuejs.org/rules/
+    'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
   },
 };

@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .el-scrollbar ::v-deep(.el-scrollbar__view) {
   height: 100%;
 }
