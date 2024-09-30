@@ -15,5 +15,6 @@ module.exports = {
     // https://eslint.vuejs.org/rules/
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
   },
 };
