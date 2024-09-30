@@ -5,8 +5,18 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: () => import('@/views/home.vue'),
+      redirect: 'home',
+    },
+    {
+      path: '/',
+      component: () => import('@/layouts/default/index.vue'),
+      children: [
+        {
+          path: 'home',
+          name: 'home',
+          component: () => import('@/views/home.vue'),
+        },
+      ],
     },
   ],
 });

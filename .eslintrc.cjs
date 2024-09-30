@@ -12,6 +12,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-explicit-any': 'error',
 
+    // https://eslint.vuejs.org/rules/
     'vue/multi-word-component-names': 'off',
   },
 };
