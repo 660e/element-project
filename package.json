@@ -15,15 +15,15 @@
   "dependencies": {
     "@vueuse/core": "^11.1.0",
     "element-plus": "^2.8.4",
-    "pinia": "^2.2.2",
-    "vue": "^3.5.10",
+    "pinia": "^2.2.4",
+    "vue": "^3.5.11",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@iconify-json/ep": "^1.2.0",
+    "@iconify-json/ep": "^1.2.1",
     "@rushstack/eslint-patch": "^1.10.4",
     "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.16.10",
+    "@types/node": "^20.16.11",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@vitejs/plugin-vue": "^5.1.4",
