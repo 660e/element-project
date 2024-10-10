@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { useConfigProviderStore } from '@/stores/modules/config-provider';
-import { Size } from '@/stores/modules/config-provider';
+import { ESize } from '@/stores/modules/config-provider';
 import SetUp from '~icons/ep/SetUp';
 
 const visible = ref(false);
 const onVisibleChange = (val: boolean) => (visible.value = val);
 
 const configProviderStore = useConfigProviderStore();
-const handleCommand = (command: Size) => (configProviderStore.size = command);
-const sizeOptions = Object.keys(Size).map((key) => {
-  return { command: Size[key as keyof typeof Size], label: key };
+const handleCommand = (command: ESize) => (configProviderStore.size = command);
+const sizeOptions = Object.keys(ESize).map((key) => {
+  return { command: ESize[key as keyof typeof ESize], label: key };
 });
 </script>
 
