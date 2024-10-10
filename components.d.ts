@@ -27,7 +27,7 @@ declare module 'vue' {
     IEpDArrowLeft: typeof import('~icons/ep/d-arrow-left')['default']
     IEpDArrowRight: typeof import('~icons/ep/d-arrow-right')['default']
     IEpMenu: typeof import('~icons/ep/menu')['default']
-    QPage: typeof import('./components/q-page/index.vue')['default']
+    QPage: typeof import('./src/components/q-page/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
