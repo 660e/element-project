@@ -1,7 +1,7 @@
 /* https://www.typescriptlang.org/tsconfig/ */
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["auto-imports.d.ts", "components.d.ts", "env.d.ts", "src/**/*", "src/**/*.vue"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     /* Type Checking */
