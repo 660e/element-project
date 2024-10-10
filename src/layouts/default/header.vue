@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import { useConfigProviderStore } from '@/stores';
+import { ESizeNumber } from '@/stores/modules/config-provider';
 import PKG from '../../../package.json';
+
 import SizeComponent from '../components/size.vue';
 import DarkComponent from '../components/dark.vue';
+
+const configProviderStore = useConfigProviderStore();
 </script>
 
 <template>
@@ -15,6 +20,6 @@ import DarkComponent from '../components/dark.vue';
     </div>
     <el-divider direction="vertical" />
     <div class="pl-2">Admin</div>
-    <el-avatar :size="32" src="https://avatars.githubusercontent.com/u/28943787" />
+    <el-avatar :size="ESizeNumber[configProviderStore.size]" src="https://avatars.githubusercontent.com/u/28943787" />
   </header>
 </template>
