@@ -21,6 +21,8 @@ declare module 'vue' {
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    ElTable: typeof import('element-plus/es')['ElTable']
+    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
@@ -28,6 +30,7 @@ declare module 'vue' {
     IEpDArrowRight: typeof import('~icons/ep/d-arrow-right')['default']
     IEpMenu: typeof import('~icons/ep/menu')['default']
     QPage: typeof import('./src/components/q-page/index.vue')['default']
+    QTable: typeof import('./src/components/q-table/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
