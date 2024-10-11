@@ -8,9 +8,7 @@ defineProps<{
 
 const tableRef = ref();
 
-onMounted(() => {
-  console.log(tableRef.value);
-});
+defineExpose({ $el: tableRef });
 </script>
 
 <template>
