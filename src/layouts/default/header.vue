@@ -4,7 +4,7 @@ import { ESizeNumber } from '@/stores/modules/config-provider';
 import PKG from '../../../package.json';
 
 import SizeComponent from '../components/size.vue';
-import DarkComponent from '../components/dark.vue';
+import AppearanceComponent from '../components/appearance.vue';
 
 const configProviderStore = useConfigProviderStore();
 </script>
@@ -16,7 +16,7 @@ const configProviderStore = useConfigProviderStore();
     <div class="flex-1"></div>
     <div>
       <size-component />
-      <dark-component />
+      <appearance-component />
     </div>
     <el-divider direction="vertical" />
     <div class="pl-2">Admin</div>
