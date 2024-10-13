@@ -5,7 +5,12 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      redirect: 'home',
+      redirect: 'login',
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/login/index.vue'),
     },
     {
       path: '/',
