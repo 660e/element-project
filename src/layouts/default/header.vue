@@ -20,6 +20,6 @@ const configProviderStore = useConfigProviderStore();
     </div>
     <el-divider direction="vertical" />
     <div class="pl-2">Admin</div>
-    <el-avatar :size="ESizeNumber[configProviderStore.size]" src="https://avatars.githubusercontent.com/u/28943787" />
+    <el-avatar :size="ESizeNumber[configProviderStore.size]" fit="cover" src="https://avatars.githubusercontent.com/u/28943787" />
   </header>
 </template>
