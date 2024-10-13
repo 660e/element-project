@@ -45,4 +45,11 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 2024,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
 });
