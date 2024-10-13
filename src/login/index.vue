@@ -39,9 +39,10 @@ const login = () => {
       :rules="rules"
       :disabled="loading"
       class="w-60 p-4 rounded border border-neutral-200 dark:border-neutral-800"
+      @keypress.enter="login"
     >
       <el-form-item prop="username">
-        <el-input v-model="model.username" placeholder="Username">
+        <el-input v-model="model.username" :autofocus="true" placeholder="Username">
           <template #prefix>
             <el-icon><i-ep-user /></el-icon>
           </template>
