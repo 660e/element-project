@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { useConfigProviderStore } from '@/stores';
-import { ESizeNumber } from '@/stores/modules/config-provider';
 import PKG from '../../../package.json';
 
 import SizeComponent from '../components/size.vue';
 import AppearanceComponent from '../components/appearance.vue';
-
-const configProviderStore = useConfigProviderStore();
+import AvatarComponent from '../components/avatar.vue';
 </script>
 
 <template>
@@ -19,7 +16,6 @@ const configProviderStore = useConfigProviderStore();
       <appearance-component />
     </div>
     <el-divider direction="vertical" />
-    <div class="pl-2">Admin</div>
-    <el-avatar :size="ESizeNumber[configProviderStore.size]" fit="cover" src="https://avatars.githubusercontent.com/u/28943787" />
+    <avatar-component class="pl-2" />
   </header>
 </template>
