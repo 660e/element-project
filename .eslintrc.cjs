@@ -10,8 +10,6 @@ module.exports = {
     parser: '@typescript-eslint/parser',
   },
   rules: {
-    '@typescript-eslint/no-explicit-any': 'error',
-
     // https://eslint.org/docs/v8.x/rules/
     'no-var': 'error',
     'prefer-const': 'error',
@@ -22,5 +20,9 @@ module.exports = {
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
     'vue/singleline-html-element-content-newline': 'off',
+
+    // https://typescript-eslint.io/rules/
+    '@typescript-eslint/no-empty-function': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
   },
 };
