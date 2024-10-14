@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-export default createRouter({
+const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
+  scrollBehavior: () => ({ top: 0 }),
   routes: [
     {
       path: '/',
@@ -25,3 +26,5 @@ export default createRouter({
     },
   ],
 });
+
+export default router;
