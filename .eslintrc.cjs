@@ -17,6 +17,7 @@ module.exports = {
     'prefer-const': 'error',
 
     // https://eslint.vuejs.org/rules/
+    'vue/custom-event-name-casing': ['error', 'kebab-case'],
     'vue/html-self-closing': ['error', { html: { normal: 'never', void: 'always' } }],
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
