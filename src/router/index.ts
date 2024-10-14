@@ -1,11 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 
-export const routes = [
+import exampleRoutes from './modules/example';
+
+export const routes: RouteRecordRaw[] = [
   {
     path: 'home',
     name: 'home',
     component: () => import('@/views/home.vue'),
   },
+  exampleRoutes,
 ];
 
 const router = createRouter({
