@@ -12,6 +12,10 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-explicit-any': 'error',
 
+    // https://eslint.org/docs/v8.x/rules/
+    'no-var': 'error',
+    'prefer-const': 'error',
+
     // https://eslint.vuejs.org/rules/
     'vue/html-self-closing': ['error', { html: { normal: 'never', void: 'always' } }],
     'vue/max-attributes-per-line': 'off',
