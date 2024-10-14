@@ -19,10 +19,12 @@ module.exports = {
     'vue/html-self-closing': ['error', { html: { normal: 'never', void: 'always' } }],
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
+    'vue/no-static-inline-styles': ['error'],
     'vue/singleline-html-element-content-newline': 'off',
 
     // https://typescript-eslint.io/rules/
     '@typescript-eslint/no-empty-function': 'error',
-    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-inferrable-types': 'error',
+    '@typescript-eslint/no-non-null-assertion': 'error',
   },
 };
