@@ -2,7 +2,19 @@ import type { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw = {
   path: 'example',
-  children: [],
+  meta: {
+    label: 'Example',
+  },
+  children: [
+    {
+      path: 'q-table',
+      name: 'example-q-table',
+      component: () => import('@/views/example/q-table/index.vue'),
+      meta: {
+        label: 'QTable',
+      },
+    },
+  ],
 };
 
 export default routes;
