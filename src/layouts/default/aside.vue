@@ -1,32 +1,62 @@
-<script setup lang="ts">
+<script setup lang="tsx">
+import type { RouteRecordRaw } from 'vue-router';
 import { routes } from '@/router';
 
 const isCollapse = ref(false);
 
-console.log(routes);
+const renderMenu = (props: { routes: RouteRecordRaw[] }) => {
+  return (
+    <el-menu collapse={isCollapse.value} class="w-60">
+      {props.routes.map((route, index) => {
+        if (route.children?.length) {
+          return (
+            <el-sub-menu index={String(index)}>
+              {{
+                title: () => {
+                  return (
+                    <>
+                      <el-icon>
+                        <i-ep-menu />
+                      </el-icon>
+                      <span>{route.meta?.label}</span>
+                    </>
+                  );
+                },
+                default: () => {
+                  return route.children?.map((r, i) => {
+                    return (
+                      <el-menu-item index={String(i)}>
+                        <el-icon>
+                          <i-ep-menu />
+                        </el-icon>
+                        <span>{r.meta?.label}</span>
+                      </el-menu-item>
+                    );
+                  });
+                },
+              }}
+            </el-sub-menu>
+          );
+        } else {
+          return (
+            <el-menu-item index={String(index)}>
+              <el-icon>
+                <i-ep-menu />
+              </el-icon>
+              <span>{route.meta?.label}</span>
+            </el-menu-item>
+          );
+        }
+      })}
+    </el-menu>
+  );
+};
 </script>
 
 <template>
   <aside class="flex flex-col border-r border-neutral-200 dark:border-neutral-800">
     <el-scrollbar class="flex-1">
-      <el-menu :collapse="isCollapse" class="w-60">
-        <template v-for="(route, index) in routes" :key="index">
-          <el-sub-menu v-if="route.children?.length" :index="String(index)">
-            <template #title>
-              <el-icon><i-ep-menu /></el-icon>
-              <span>{{ route.meta?.label }}</span>
-            </template>
-            <el-menu-item v-for="(r, i) in route.children" :key="i" :index="String(i)">
-              <el-icon><i-ep-menu /></el-icon>
-              <span>{{ r.meta?.label }}</span>
-            </el-menu-item>
-          </el-sub-menu>
-          <el-menu-item v-else :index="String(index)">
-            <el-icon><i-ep-menu /></el-icon>
-            <span>{{ route.meta?.label }}</span>
-          </el-menu-item>
-        </template>
-      </el-menu>
+      <render-menu :routes="routes" />
     </el-scrollbar>
 
     <div
