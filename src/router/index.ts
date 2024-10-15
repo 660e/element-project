@@ -3,11 +3,24 @@ import type { RouteRecordRaw } from 'vue-router';
 
 import exampleRoutes from './modules/example';
 
+declare module 'vue-router' {
+  interface RouteMeta {
+    label: string;
+    icon?: string;
+    hide?: boolean;
+    keep?: boolean;
+  }
+}
+
 export const routes: RouteRecordRaw[] = [
   {
     path: 'home',
     name: 'home',
     component: () => import('@/views/home.vue'),
+    meta: {
+      label: 'Home',
+      icon: 'home',
+    },
   },
   exampleRoutes,
 ];

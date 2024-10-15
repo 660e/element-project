@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { routes } from '@/router';
+
 const isCollapse = ref(false);
+
+console.log(routes);
 </script>
 
 <template>
