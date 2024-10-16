@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useConfigProviderStore } from '@/stores';
 import { ESizeNumber } from '@/stores/modules/config-provider';
-import SwitchButton from '~icons/ep/SwitchButton';
 
 const configProviderStore = useConfigProviderStore();
 
 const router = useRouter();
+const commands = [{ label: 'Log out', value: 'logout', icon: IEpSwitchButton }];
 const handleCommand = (command: string) => {
   switch (command) {
     case 'logout':
@@ -22,7 +22,9 @@ const handleCommand = (command: string) => {
       <el-avatar :size="ESizeNumber[configProviderStore.size]" fit="cover" src="https://avatars.githubusercontent.com/u/28943787" />
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item :icon="SwitchButton" command="logout">Log out</el-dropdown-item>
+          <el-dropdown-item v-for="command in commands" :key="command.value" :command="command.value" :icon="command.icon">
+            {{ command.label }}
+          </el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
