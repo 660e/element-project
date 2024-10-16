@@ -4,11 +4,12 @@ import { routes as routesRaw } from '@/router';
 
 const isCollapse = ref(false);
 
-const renderItem = (routes: RouteRecordRaw[]) => {
+const renderItem = (routes: RouteRecordRaw[], parentIndex = '') => {
   return routes.map((route, index) => {
+    const currentIndex = parentIndex ? `${parentIndex}-${index + 1}` : String(index + 1);
     if (route.children?.length) {
       return (
-        <el-sub-menu index={String(index)}>
+        <el-sub-menu index={currentIndex}>
           {{
             title: () => {
               return (
@@ -16,21 +17,25 @@ const renderItem = (routes: RouteRecordRaw[]) => {
                   <el-icon>
                     <i-ep-menu />
                   </el-icon>
-                  <span>{route.meta?.label}</span>
+                  <span>
+                    {currentIndex} {route.meta?.label}
+                  </span>
                 </>
               );
             },
-            default: () => renderItem(route.children || []),
+            default: () => renderItem(route.children || [], currentIndex),
           }}
         </el-sub-menu>
       );
     } else {
       return (
-        <el-menu-item index={String(index)}>
+        <el-menu-item index={currentIndex}>
           <el-icon>
             <i-ep-menu />
           </el-icon>
-          <span>{route.meta?.label}</span>
+          <span>
+            {currentIndex} {route.meta?.label}
+          </span>
         </el-menu-item>
       );
     }
