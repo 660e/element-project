@@ -4,6 +4,7 @@ const routes: RouteRecordRaw = {
   path: 'example',
   meta: {
     label: 'Example',
+    icon: IEpHelpFilled,
   },
   children: [
     {

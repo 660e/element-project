@@ -8,6 +8,8 @@ export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const IEpArrowRight: typeof import('~icons/ep/arrow-right')['default']
+  const IEpHelpFilled: typeof import('~icons/ep/help-filled')['default']
+  const IEpHomeFilled: typeof import('~icons/ep/home-filled')['default']
   const IEpMenu: typeof import('~icons/ep/menu')['default']
   const IEpMoon: typeof import('~icons/ep/moon')['default']
   const IEpSetUp: typeof import('~icons/ep/set-up')['default']

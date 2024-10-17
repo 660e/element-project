@@ -7,6 +7,8 @@ const isCollapse = ref(false);
 const renderItem = (routes: RouteRecordRaw[], parentIndex = '') => {
   return routes.map((route, index) => {
     const currentIndex = parentIndex ? `${parentIndex}-${index + 1}` : String(index + 1);
+    const MenuIcon = route.meta?.icon ?? (() => <></>);
+
     if (route.children?.length) {
       return (
         <el-sub-menu index={currentIndex}>
@@ -15,7 +17,7 @@ const renderItem = (routes: RouteRecordRaw[], parentIndex = '') => {
               return (
                 <>
                   <el-icon>
-                    <i-ep-menu />
+                    <MenuIcon />
                   </el-icon>
                   <span>
                     {currentIndex} {route.meta?.label}
@@ -31,7 +33,7 @@ const renderItem = (routes: RouteRecordRaw[], parentIndex = '') => {
       return (
         <el-menu-item index={currentIndex}>
           <el-icon>
-            <i-ep-menu />
+            <MenuIcon />
           </el-icon>
           <span>
             {currentIndex} {route.meta?.label}

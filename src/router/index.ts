@@ -1,3 +1,4 @@
+import type { FunctionalComponent } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import type { RouteRecordRaw } from 'vue-router';
 
@@ -6,7 +7,7 @@ import exampleRoutes from './modules/example';
 declare module 'vue-router' {
   interface RouteMeta {
     label: string;
-    icon?: string;
+    icon?: FunctionalComponent;
     hide?: boolean;
     keep?: boolean;
   }
@@ -19,7 +20,7 @@ export const routes: RouteRecordRaw[] = [
     component: () => import('@/views/home.vue'),
     meta: {
       label: 'Home',
-      icon: 'home',
+      icon: IEpHomeFilled,
     },
   },
   exampleRoutes,
