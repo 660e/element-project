@@ -34,12 +34,12 @@ const login = () => {
       <appearance-component />
     </div>
     <el-form
-      ref="formRef"
+      :disabled="loading"
       :model="model"
       :rules="rules"
-      :disabled="loading"
-      class="w-60 p-4 rounded border border-neutral-200 dark:border-neutral-800"
       @keypress.enter="login"
+      class="w-60 p-4 rounded border border-neutral-200 dark:border-neutral-800"
+      ref="formRef"
     >
       <el-form-item prop="username">
         <el-input v-model="model.username" :autofocus="true" placeholder="Username">
@@ -55,7 +55,7 @@ const login = () => {
           </template>
         </el-input>
       </el-form-item>
-      <el-button type="primary" class="w-full" :loading="loading" @click="login">Sign in</el-button>
+      <el-button :loading="loading" @click="login" class="w-full" type="primary">Sign in</el-button>
     </el-form>
   </div>
 </template>

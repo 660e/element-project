@@ -10,8 +10,8 @@ const tabRemove = (name: TabPaneName) => {
 
 <template>
   <div class="app-tabs">
-    <el-tabs v-model="active" type="border-card" closable @tab-remove="tabRemove">
-      <el-tab-pane v-for="tab in tabs" :key="tab" :label="tab" :name="tab" />
+    <el-tabs v-model="active" @tab-remove="tabRemove" type="border-card" closable>
+      <el-tab-pane v-for="tab in tabs" :label="tab" :name="tab" :key="tab" />
     </el-tabs>
   </div>
 </template>

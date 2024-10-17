@@ -22,7 +22,7 @@ const handleCommand = (command: string) => {
       <el-avatar :size="ESizeNumber[configProviderStore.size]" fit="cover" src="https://avatars.githubusercontent.com/u/28943787" />
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item command="logout" :icon="SwitchButton">Log out</el-dropdown-item>
+          <el-dropdown-item :icon="SwitchButton" command="logout">Log out</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>

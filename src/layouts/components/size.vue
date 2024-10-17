@@ -16,10 +16,10 @@ const sizeOptions = Object.keys(ESize).map((key) => {
 <template>
   <el-tooltip :disabled="visible" content="Size">
     <el-dropdown trigger="click" @command="handleCommand" @visible-change="onVisibleChange">
-      <el-button circle text :icon="SetUp" />
+      <el-button :icon="SetUp" circle text />
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item v-for="item in sizeOptions" :key="item.value" :command="item.value">{{ item.label }}</el-dropdown-item>
+          <el-dropdown-item v-for="item in sizeOptions" :command="item.value" :key="item.value">{{ item.label }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
