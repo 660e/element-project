@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useConfigProviderStore } from '@/stores/modules/config-provider';
 import { ESize } from '@/stores/modules/config-provider';
+import SetUp from '~icons/ep/SetUp';
 
 const visible = ref(false);
 const onVisibleChange = (val: boolean) => (visible.value = val);
@@ -15,7 +16,7 @@ const sizeOptions = Object.keys(ESize).map((key) => {
 <template>
   <el-tooltip :disabled="visible" content="Size">
     <el-dropdown trigger="click" @command="handleCommand" @visible-change="onVisibleChange">
-      <el-button circle text><i-ep-set-up /></el-button>
+      <el-button circle text :icon="SetUp" />
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item v-for="item in sizeOptions" :key="item.value" :command="item.value">{{ item.label }}</el-dropdown-item>

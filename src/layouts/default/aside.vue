@@ -62,10 +62,8 @@ const renderMenu = (props: { routes: RouteRecordRaw[] }) => {
       class="h-8 cursor-pointer flex justify-center items-center duration-200 border-t border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 hover:dark:bg-black"
       @click="isCollapse = !isCollapse"
     >
-      <el-icon>
-        <i-ep-d-arrow-right v-if="isCollapse" />
-        <i-ep-d-arrow-left v-else />
-      </el-icon>
+      <i-ep-d-arrow-right v-if="isCollapse" />
+      <i-ep-d-arrow-left v-else />
     </div>
   </aside>
 </template>
