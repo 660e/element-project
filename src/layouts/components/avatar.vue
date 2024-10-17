@@ -18,7 +18,7 @@ const handleCommand = (command: string) => {
 <template>
   <div class="flex items-center space-x-2">
     <div>Admin</div>
-    <el-dropdown trigger="click" @command="handleCommand">
+    <el-dropdown @command="handleCommand" trigger="click">
       <el-avatar :size="ESizeNumber[configProviderStore.size]" fit="cover" src="https://avatars.githubusercontent.com/u/28943787" />
       <template #dropdown>
         <el-dropdown-menu>

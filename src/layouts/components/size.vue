@@ -15,7 +15,7 @@ const sizeOptions = Object.keys(ESize).map((key) => {
 
 <template>
   <el-tooltip :disabled="visible" content="Size">
-    <el-dropdown trigger="click" @command="handleCommand" @visible-change="onVisibleChange">
+    <el-dropdown @command="handleCommand" @visible-change="onVisibleChange" trigger="click">
       <el-button :icon="SetUp" circle text />
       <template #dropdown>
         <el-dropdown-menu>
