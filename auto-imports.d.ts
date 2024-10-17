@@ -7,14 +7,6 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const IEpArrowRight: typeof import('~icons/ep/arrow-right')['default']
-  const IEpHelpFilled: typeof import('~icons/ep/help-filled')['default']
-  const IEpHomeFilled: typeof import('~icons/ep/home-filled')['default']
-  const IEpMenu: typeof import('~icons/ep/menu')['default']
-  const IEpMoon: typeof import('~icons/ep/moon')['default']
-  const IEpSetUp: typeof import('~icons/ep/set-up')['default']
-  const IEpSunny: typeof import('~icons/ep/sunny')['default']
-  const IEpSwitchButton: typeof import('~icons/ep/switch-button')['default']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']

@@ -1,10 +1,12 @@
 import type { RouteRecordRaw } from 'vue-router';
 
+import HelpFilled from '~icons/ep/HelpFilled';
+
 const routes: RouteRecordRaw = {
   path: 'example',
   meta: {
     label: 'Example',
-    icon: IEpHelpFilled,
+    icon: HelpFilled,
   },
   children: [
     {

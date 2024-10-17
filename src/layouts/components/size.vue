@@ -5,7 +5,6 @@ import { ESize } from '@/stores/modules/config-provider';
 const visible = ref(false);
 const onVisibleChange = (val: boolean) => (visible.value = val);
 
-const buttonIcon = IEpSetUp;
 const configProviderStore = useConfigProviderStore();
 const handleCommand = (command: ESize) => (configProviderStore.size = command);
 const sizeOptions = Object.keys(ESize).map((key) => {
@@ -16,7 +15,7 @@ const sizeOptions = Object.keys(ESize).map((key) => {
 <template>
   <el-tooltip :disabled="visible" content="Size">
     <el-dropdown trigger="click" @command="handleCommand" @visible-change="onVisibleChange">
-      <el-button :icon="buttonIcon" circle text />
+      <el-button circle text><i-ep-set-up /></el-button>
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item v-for="item in sizeOptions" :key="item.value" :command="item.value">{{ item.label }}</el-dropdown-item>

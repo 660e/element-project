@@ -14,12 +14,7 @@ export default defineConfig({
     // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
       imports: ['vue', 'vue-router'],
-      resolvers: [
-        ElementPlusResolver(),
-        IconsResolver({
-          enabledCollections: ['ep'],
-        }),
-      ],
+      resolvers: [ElementPlusResolver()],
     }),
 
     // https://github.com/unplugin/unplugin-vue-components

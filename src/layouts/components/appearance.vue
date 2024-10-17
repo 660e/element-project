@@ -3,11 +3,15 @@ import { useDark, useToggle } from '@vueuse/core';
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-const buttonIcon = computed(() => (isDark.value ? IEpSunny : IEpMoon));
 </script>
 
 <template>
   <el-tooltip content="Appearance">
-    <el-button :icon="buttonIcon" circle text @click="toggleDark()" />
+    <el-button circle text @click="toggleDark()">
+      <el-icon>
+        <i-ep-sunny v-if="isDark" />
+        <i-ep-moon v-else />
+      </el-icon>
+    </el-button>
   </el-tooltip>
 </template>
